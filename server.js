@@ -2,6 +2,8 @@ const url = 'axxon/live/media/ENELPOC/DeviceIpint.10/SourceEndpoint.video:0:0?w=
 var express = require('express')
 var proxy = require('http-proxy-middleware')
 
+var port = process.env.PORT || 3000
+
 var app = express()
 app.get('/test', (req, res) => {
 	res.json({ status: 'ok' })
@@ -15,4 +17,6 @@ app.use(
 	})
 )
 
-app.listen(3000)
+app.listen(port, function() {
+	console.log(`Axoon app listening on port !`, port)
+})
