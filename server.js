@@ -3,7 +3,9 @@ var express = require('express')
 var proxy = require('http-proxy-middleware')
 
 var app = express()
-
+app.get('/test', (req, res) => {
+	res.json({ status: 'ok' })
+})
 app.use(
 	'/',
 	proxy({
@@ -12,4 +14,5 @@ app.use(
 		auth: 'root:root'
 	})
 )
+
 app.listen(3000)
