@@ -1,0 +1,24 @@
+{
+  "name": "axxon",
+  "dependencies": {
+    "express": "^4.17.0",
+    "http-proxy-middleware": "^0.19.1"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gino8080/axxon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gino8080/axxon/issues"
+  },
+  "homepage": "https://github.com/gino8080/axxon#readme",
+  "description": ""
+}
