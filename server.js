@@ -4,10 +4,12 @@ const MAIN_URL = 'https://progetti.polis-net.it/'
 //https://dashboard.heroku.com/apps/axxon/
 var express = require('express')
 var proxy = require('http-proxy-middleware')
-
+var cors = require('cors')
 var port = process.env.PORT || 3000
 
 var app = express()
+app.use(cors())
+app.options('*', cors()) // da includere prima delle altre routes
 app.get('/test', (req, res) => {
 	res.json({ status: 'ok' })
 })
